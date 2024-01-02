@@ -7,45 +7,45 @@ b = float(input("informe o segundo numero: "))
 
 operacao = input("Qual operação voce quer realizar? ")
 
-class Calculadora:    
+
     
-    def adicao(self, a, b):
-        resultado = a + b
-        print(resultado)
+def adicao(a, b):
+    return a + b
+   
 
-    def subtracao(self, a, b):
-        resultado = a - b
-        print(resultado)
+def subtracao(a, b):
+    return a - b
+        
 
-    def multiplicacao(self, a, b):
-        resultado = a * b
-        print(resultado)
+def multiplicacao(a, b):
+    return a * b
+    
 
-    def divisao(self, a, b):
-        resultado = a / b
-        print(resultado)
-
-    def resto(self, a, b):
-        resultado = a % b
-        print(resultado)
+def divisao(a, b):
+    if b == 0:
+        print("Impossivel dividir por 0")
+    else:
+        return a / b
 
 
-calc = Calculadora()
+def resto(a, b):
+    return  a % b
+    
 
 if operacao == "+":
-    calc.adicao(a, b)
+    print(adicao(a, b))
 
 elif operacao == "-":
-    calc.subtracao(a, b)
+    print(subtracao(a, b))
 
 elif operacao == "*":
-    calc.multiplicacao(a, b)
+    print(multiplicacao(a, b))
 
 elif operacao == "%":
-    calc.resto(a, b)
+    print(resto(a, b))
 
 elif operacao == "/":
-    calc.divisao(a, b)
+    print(divisao(a, b))
 
 else:
     print("Operação Invalida!")
